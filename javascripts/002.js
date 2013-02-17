@@ -1,7 +1,7 @@
 var myNamespacedSolution = {
   szamlalo:0,
 
-  forras:("images/01.jpg","images/02.jpg","images/03.jpg","images/04.jpg","images/05.jpg"),
+  forras:('images/01.jpg','images/02.jpg','images/03.jpg','images/04.jpg','images/05.jpg'),
   
   onClick: function() {
     ++myNamespacedSolution.szamlalo;
