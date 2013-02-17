@@ -34,10 +34,10 @@
     Ide jön az oldal címe!
   </head>
   <body>
-    <img id="kephely" src="images/01.jpg"></img>   //A kép elhelyezése az oldalon
+    <img id="kephely" src="images/01.jpg"></img>
   </body>
 </html>
-                    </textarea>
+                    </textarea><br>
             <h3>2: </h3>
             <p>Következhet a javascript parancs megírása, amit majd egy külön *.js fájlba mentünk el.
               Mivel a képeket tömbben kezeljük, ezért a léptetéshez először is egy számlálót vezetünk be,
@@ -46,13 +46,32 @@
               a forrásfájlok elérési útját és nevét kell idézőjelek között megadnunk, vesszővel elválasztva!
               <br>Figyeljünk a sorvégi pontosvesszőkre!
               
-              <textarea rows="5" cols="72" readonly disabled contenteditable="false" resize="none">
+              <textarea rows="3" cols="72" readonly disabled contenteditable="false" resize="none">
 var szamlalo=0;
 var forras=new Array("kep1.jpg","kep2.jpg","kep3.jpg");
                     </textarea>
+            
+              <br><h3>3: </h3>
+              Hozzunk létre egy függvényt, ami megszerzi a szükséges információkat a hívó oldalról. 
+              Szükségünk lesz a korábban megadott ID-re, hogy a képünket forrását (src) cserélgetni tudjuk.
+              Ha tudattuk a függvénnyel, hogy milyen elemről beszélünk, ideje lesz megadnunk, hogy miért is kerestük,
+              lássuk el egy eseményfigyelővel (EventListener) mely egyből figyelmezteti a függvényt, ha bekövetkezne a
+              feltételben adott esemény. Lássuk, mit csináltunk eddig: 
+              <textarea rows="8" cols="72" readonly disabled contenteditable="false" resize="none">
+var szamlalo=0;
+var forras=new Array("kep1.jpg","kep2.jpg","kep3.jpg");
+
+function setUp() {
+  kep = document.getElementById('kephely');
+  kep.addEventListener('click', onClick);
+  }
+                    </textarea><br><br>
+              Hozzuk létre az eseménykezelő függvényt, ami majd lépteti a képet. Mivel az oldalunkon már ott van a
+              tömb első elemeként megadott kép, ezért a függvényt egy inkrementálással kezdjük. Ezután egy rövid
+              ellenőrzés, hogy nem léptük-e túl a tömb által megszabott korlátokat (tombneve.length a tömb hossza).
+              Ha a számláló értéke nem nagyobb a tömb maximális elemszámánál, akkor cseréljük
             </p>
-        
-      </section>
+        </section>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
