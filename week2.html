@@ -37,7 +37,7 @@
     <img id="kephely" src="images/01.jpg"></img>
   </body>
 </html></textarea><br>
-            <h3>2: </h3>
+            <br><h3>2: </h3>
             <p>Következhet a javascript parancs megírása, amit majd egy külön *.js fájlba mentünk el.
               Mivel a képeket tömbben kezeljük, ezért a léptetéshez először is egy számlálót vezetünk be,
               majd az értékét nullára állítjuk, hogy a tömb első elemével kezdjük. (A tömbök számozása 0-val kezdődik.)
@@ -65,7 +65,7 @@ function setUp() {
   kep.addEventListener('click', onClick);
   }
                     </textarea><br>
-                    <h3>4: </h3>
+                    <br><h3>4: </h3>
               Hozzuk létre az eseménykezelő függvényt, ami majd lépteti a képet. Mivel az oldalunkon már ott van a
               tömb első elemeként megadott kép, ezért a függvényt egy inkrementálással kezdjük. Ezután egy rövid
               ellenőrzés, hogy nem léptük-e túl a tömb által megszabott korlátokat (tombneve.length a tömb hossza).
@@ -74,7 +74,7 @@ function setUp() {
               különben hibába futhatunk!
               Ha mindezekkel megvagyunk, már csak gondoskodnunk kell róla, hogy elinduljon a képünk azonosítása. Erről
               a kódsor utolsó sora gondoskodik.
-              <textarea rows="8" cols="72" readonly disabled contenteditable="false" resize="none">
+              <textarea rows="15" cols="72" readonly disabled contenteditable="false" resize="none">
 var szamlalo=0;
 var forras=new Array("kep1.jpg","kep2.jpg","kep3.jpg");
 
@@ -90,7 +90,7 @@ function onClick(ev) {
   else {szamlalo=0;kep.src=forras[szamlalo];}
 }
 document.addEventListener('DOMContentLoaded', setUp);
-</textarea>
+</textarea><br><hr>
               
             </p>
         </section>
