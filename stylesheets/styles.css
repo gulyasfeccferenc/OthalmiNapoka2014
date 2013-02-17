@@ -41,6 +41,10 @@ a {
   text-decoration: none;
 }
 
+div.source {font-family: courier; font-size: 10pt;
+       background: #ffffff;
+	     padding: 0px 10px;
+	     border: thin solid gray }
 p {
   margin: 0 0 20px;
   padding: 0;
