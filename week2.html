@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', setUp);
 </textarea><br><hr>
            
 <a name="masodik"></a><h2>Hogyan készült #2: </h2><br>
-        <h3>1: </h3>
+        
         <p align="justify">A második feladat annyiban különbözik az előzőtől, hogy egy saját névteret (namespace) kell létrehoznunk
           a scriptünkhöz. Hosszabb kódok esetében ez nagyban megkönnyít(het)i a kódunk olvashatóságát.
           Miután létrehoztuk a névterünket csupán az előző gondolatsor alapján kell átírnunk a szkriptünket, hogy 
@@ -122,8 +122,38 @@ var myNS = {
 }
 
 document.addEventListener('DOMContentLoaded', myNS.setUp); </textarea>
-        
-        </section>
+
+<a name="harmadik"></a><h2>Hogyan készült #3: </h2><br>
+        <p>A harmadik feladat szerint privát függvénnyel(függvényekkel) kell megoldanunk a korábbi problémát.
+          Ha az első kódsort vesszük alapul, nem sok módosítást kell elvégeznünk. Csupán beágyazzuk egy functionba
+          a korábbi kódsorozat lényegi részét. Fontos, hogy az inicializáló függvényt (jelen esetben setUp névre hallgat)
+          visszaadjuk a hívő félnek. Ezenfelül a fő function zárójelei után még egy zárójelpár kerül, hogy a függvényünk
+          csak egyszer hajtódjon végre.
+          
+        </p>
+        <textarea rows="20" cols="72" readonly disabled contenteditable="false" resize="none">
+var myS = (function() {
+  var szamlalo;
+  szamlalo=0;
+
+  var forras=new Array("kep1.jpg","kep2.jpg","kep3.jpg");
+  
+  function onClick(ev) {
+    ++szamlalo;
+    if(szamlalo<forras.length){
+      kep.src=forras[szamlalo];}
+    else {szamlalo=0;kep.src=forras[szamlalo];}
+  }
+
+  function setUp() {
+    kep = document.getElementById('kephely');
+    kep.addEventListener('click', onClick);
+  }
+  return setUp;
+})();
+
+document.addEventListener('DOMContentLoaded', myS);
+        </textarea></forras></section>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
