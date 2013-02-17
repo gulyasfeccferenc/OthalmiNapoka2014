@@ -7,7 +7,7 @@ var myNamespacedSolution = {
     ++myNamespacedSolution.szamlalo;
     if(myNamespacedSolution.szamlalo<myNamespacedSolution.forras.length){
       kep.src=forras[szamlalo]; }
-    else {myNamespacedSolution.szamlalo=0; myNamespacedSolution.kep.src=myNamespacedSolution.forras[myNamespacedSolution.szamlalo];},
+    else {myNamespacedSolution.szamlalo=0; myNamespacedSolution.kep.src=myNamespacedSolution.forras[myNamespacedSolution.szamlalo];}
   },
 
   setUp: function() {
