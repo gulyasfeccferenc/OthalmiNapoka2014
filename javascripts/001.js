@@ -1,13 +1,17 @@
-var szamlalo, forras;
+var szamlalo;
 szamlalo=0;
-document.bgColor="black";
-var kepek=new Array("images/01.jpg","images/02.jpg","images/03.jpg","images/04.jpg","images/05.jpg");
 
-function holjar()
-{
-for(szamlalo;szamlalo<kepek.length; szamlalo++) {
-document.kep.src=kepek[szamlalo];
-if(szamlalo+1=kepek.length) {szamlalo=0;}
+var forras=new Array("images/01.jpg","images/02.jpg","images/03.jpg","images/04.jpg","images/05.jpg");
+function onClick(ev) {
+++szamlalo;
+if(szamlalo!=forras.length){
+kep.src=forras[szamlalo];}
+else {szamlalo=0;}
+}
+function setUp() {
+  kep = document.getElementById('kephely');
+  kep.addEventListener('click', onClick);
+  
 }
 
-}
+document.addEventListener('DOMContentLoaded', setUp);
