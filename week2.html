@@ -92,9 +92,37 @@ function onClick(ev) {
 }
 document.addEventListener('DOMContentLoaded', setUp);
 </textarea><br><hr>
-              
-            </p>
-            <a href="#elso">Tényleg megy?</a>
+           
+<a name="masodik"></a><h2>Hogyan készült #2: </h2><br>
+        <h3>1: </h3>
+        <p align="justify">A második feladat annyiban különbözik az előzőtől, hogy egy saját névteret (namespace) kell létrehoznunk
+          a scriptünkhöz. Hosszabb kódok esetében ez nagyban megkönnyít(het)i a kódunk olvashatóságát.
+          Miután létrehoztuk a névterünket csupán az előző gondolatsor alapján kell átírnunk a szkriptünket, hogy 
+          illeszkedjen a névtér szemantikájához. A kódrészletben a myNS jelöli a saját névterünket.
+          Figyeljünk arra, hogy a névterünk függvényeire a névtérneve.függvényneve alakban hivatkozhatunk.
+          Ugyanígy a többi elemet is hasonló gondolatmenet szerint érjük el. Lássuk:
+        </p>
+        <textarea rows="20" cols="72" readonly disabled contenteditable="false" resize="none">
+var myNS = {
+  szamlalo:0, //Pontosvessző helyett vessző zárja a sorokat!
+
+  forras:['kep1.jpg','kep2.jpg','kep3.jpg'],
+  
+  onClick: function() {
+    ++myNS.szamlalo;
+    if(myNS.szamlalo<myNS.forras.length){
+      myNS.kep.src=myNS.forras[myNS.szamlalo]; }
+    else {myNS.szamlalo=0; myNS.kep.src=myNS.forras[myNS.szamlalo];}
+  },
+
+  setUp: function() {
+    myNS.kep = document.getElementById('kephely');
+    myNS.kep.addEventListener('click', myNS.onClick);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', myNS.setUp); </textarea>
+        
         </section>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
