@@ -36,8 +36,7 @@
   <body>
     <img id="kephely" src="images/01.jpg"></img>
   </body>
-</html>
-                    </textarea><br>
+</html></textarea><br>
             <h3>2: </h3>
             <p>Következhet a javascript parancs megírása, amit majd egy külön *.js fájlba mentünk el.
               Mivel a képeket tömbben kezeljük, ezért a léptetéshez először is egy számlálót vezetünk be,
@@ -65,11 +64,34 @@ function setUp() {
   kep = document.getElementById('kephely');
   kep.addEventListener('click', onClick);
   }
-                    </textarea><br><br>
+                    </textarea><br>
+                    <h3>4: </h3>
               Hozzuk létre az eseménykezelő függvényt, ami majd lépteti a képet. Mivel az oldalunkon már ott van a
               tömb első elemeként megadott kép, ezért a függvényt egy inkrementálással kezdjük. Ezután egy rövid
               ellenőrzés, hogy nem léptük-e túl a tömb által megszabott korlátokat (tombneve.length a tömb hossza).
-              Ha a számláló értéke nem nagyobb a tömb maximális elemszámánál, akkor cseréljük
+              Ha a számláló értéke nem nagyobb a tömb maximális elemszámánál, akkor cseréljük ki a kép forrását a tömbben
+              szereplő következő képforrással. Amennyiben elértük az utolsó elemet, akkor nullázzuk le a számlálót,
+              különben hibába futhatunk!
+              Ha mindezekkel megvagyunk, már csak gondoskodnunk kell róla, hogy elinduljon a képünk azonosítása. Erről
+              a kódsor utolsó sora gondoskodik.
+              <textarea rows="8" cols="72" readonly disabled contenteditable="false" resize="none">
+var szamlalo=0;
+var forras=new Array("kep1.jpg","kep2.jpg","kep3.jpg");
+
+function setUp() {
+  kep = document.getElementById('kephely');
+  kep.addEventListener('click', onClick);
+  }
+
+function onClick(ev) {
+  ++szamlalo;
+  if(szamlalo<forras.length){
+    kep.src=forras[szamlalo];}
+  else {szamlalo=0;kep.src=forras[szamlalo];}
+}
+document.addEventListener('DOMContentLoaded', setUp);
+</textarea>
+              
             </p>
         </section>
     </div>
