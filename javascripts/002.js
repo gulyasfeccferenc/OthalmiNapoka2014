@@ -1,19 +1,19 @@
-var myNamespacedSolution = {
+var myNS = {
   szamlalo:0,
 
-  forras:('images/01.jpg','images/02.jpg','images/03.jpg','images/04.jpg','images/05.jpg'),
+  forras:['images/01.jpg','images/02.jpg','images/03.jpg','images/04.jpg','images/05.jpg'],
   
   onClick: function() {
-    ++myNamespacedSolution.szamlalo;
-    if(myNamespacedSolution.szamlalo<myNamespacedSolution.forras.length){
-      myNamespacedSolution.kep.src=myNamespacedSolution.forras[myNamespacedSolution.szamlalo]; }
-    else {myNamespacedSolution.szamlalo=0; myNamespacedSolution.kep.src=myNamespacedSolution.forras[myNamespacedSolution.szamlalo];}
+    ++myNS.szamlalo;
+    if(myNS.szamlalo<myNS.forras.length){
+      myNS.kep.src=myNS.forras[myNS.szamlalo]; }
+    else {myNS.szamlalo=0; myNS.kep.src=myNS.forras[myNS.szamlalo];}
   },
 
   setUp: function() {
-    myNamespacedSolution.kep = document.getElementById('kephely');
-    myNamespacedSolution.kep.addEventListener('click', myNamespacedSolution.onClick);
+    myNS.kep = document.getElementById('kephely');
+    myNS.kep.addEventListener('click', myNS.onClick);
   }
 }
 
-document.addEventListener('DOMContentLoaded', myNamespacedSolution.setUp);
+document.addEventListener('DOMContentLoaded', myNS.setUp);
