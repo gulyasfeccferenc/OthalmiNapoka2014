@@ -41,7 +41,7 @@ a {
   text-decoration: none;
 }
 
-div.source {font-family: courier; font-size: 10pt;
+.source {font-family: courier; font-size: 10pt;
        background: #ffffff;
 	     padding: 0px 10px;
 	     border: thin solid gray }
@@ -54,6 +54,7 @@ strong {
   color: #222;
   font-weight: 700;
 }
+
 .center {
 margin-left:auto;
 margin-right:auto;
