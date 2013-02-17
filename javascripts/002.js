@@ -1,12 +1,11 @@
 var myNamespacedSolution = {
-  var szamlalo;
-  szamlalo=0;
+  szamlalo:0,
 
-  var forras=new Array("images/01.jpg","images/02.jpg","images/03.jpg","images/04.jpg","images/05.jpg");
+  forras:("images/01.jpg","images/02.jpg","images/03.jpg","images/04.jpg","images/05.jpg");
   
-  function onClick(ev) {
-    ++szamlalo;
-    if(szamlalo<forras.length){
+  onClick: function {
+    ++myNamespacedSolution.szamlalo,
+    if(myNamespacedSolution.szamlalo<myNamespacedSolution.forras.length){
       kep.src=forras[szamlalo];}
     else {szamlalo=0;kep.src=forras[szamlalo];}
   }
