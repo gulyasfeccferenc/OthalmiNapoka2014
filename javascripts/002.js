@@ -6,13 +6,13 @@ var myNamespacedSolution = {
   onClick: function {
     ++myNamespacedSolution.szamlalo,
     if(myNamespacedSolution.szamlalo<myNamespacedSolution.forras.length){
-      kep.src=forras[szamlalo];}
-    else {szamlalo=0;kep.src=forras[szamlalo];}
+      kep.src=forras[szamlalo] }
+    else {myNamespacedSolution.szamlalo=0,myNamespacedSolution.kep.src=myNamespacedSolution.forras[myNamespacedSolution.szamlalo];}
   }
 
   function setUp() {
-    kep = document.getElementById('kephely');
-    kep.addEventListener('click', onClick);
+    myNamespacedSolution.kep = document.getElementById('kephely'),
+    myNamespacedSolution.kep.addEventListener('click', myNamespacedSolution.onClick)
   }
 }
 
