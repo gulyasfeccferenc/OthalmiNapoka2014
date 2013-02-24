@@ -17,7 +17,7 @@
     <script language="javascript"> 
         var lister = {
                       outputContainer: null,
-                      c: null,
+                      
                       
                       listCounter: function(msg) {
                       var li = document.createElement('li');
@@ -29,8 +29,8 @@
         
                       szamlalo: function() {
                         outputContainer = document.getElementById('kimenet');
-                        alert(c);
-                        for (c = 1; c <=100; c++) { 
+                        
+                        for (var c = 1; c <=100; c++) { 
                           alert("szamlalo");
                         var out = myFizzy.fizz(c);
                         listCounter(out); };
