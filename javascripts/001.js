@@ -4,9 +4,9 @@ szamlalo=0;
 var forras=new Array("images/01.jpg","images/02.jpg","images/03.jpg","images/04.jpg","images/05.jpg");
 function onClick(ev) {
 ++szamlalo;
-if(szamlalo!=forras.length){
+if(szamlalo<forras.length){
 kep.src=forras[szamlalo];}
-else {szamlalo=0;}
+else {szamlalo=0;kep.src=forras[szamlalo];}
 }
 function setUp() {
   kep = document.getElementById('kephely');

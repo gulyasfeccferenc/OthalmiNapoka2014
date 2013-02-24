@@ -18,6 +18,10 @@ body {
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAUdEVYdENyZWF0aW9uIFRpbWUAMy82LzEygrTcTAAAAFRJREFUSIljfPDggZRf5RIGGNjUHsNATz6jXmSL1Kb2GLiAX+USBnrymRgGGDCORgFmoNAXjEbBaBSMRsFoFIxGwWgUjEbBaBSMRsFoFIxGwWgUAABYNujumib3wAAAAABJRU5ErkJggg==') fixed;
 }
 
+textarea{
+	resize:none;
+}
+
 .wrapper {
   width: 640px;
   margin: 0 auto;
@@ -41,6 +45,10 @@ a {
   text-decoration: none;
 }
 
+.source {font-family: courier; font-size: 10pt;
+       background: #ffffff;
+	     padding: 0px 10px;
+	     border: thin solid gray }
 p {
   margin: 0 0 20px;
   padding: 0;
@@ -49,6 +57,13 @@ p {
 strong {
   color: #222;
   font-weight: 700;
+}
+
+.center {
+margin-left:auto;
+margin-right:auto;
+width:70%;
+
 }
 
 header {
