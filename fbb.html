@@ -6,30 +6,7 @@
   <link rel="stylesheet" href="stylesheets/styles.css">
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
   <script src="javascripts/fbb.js"></script>
-  <script>
-     var lister = {
-        c : 1,
-        listCounter: function(msg) {
-          var li = document.createElement('li');
-          var br = document.createElement('br');
-          li.innerHTML = msg;
-          lister.outputContainer.appendChild(li);
-          lister.outputContainer.appendChild(br);
-        },
-        
-        szamlalo: function() {
-          alert("Fecc");
-          lister.outputContainer = document.getElementById('kimenet');
-            for (c = 1; c <=100; c++;) {    
-              var out = myFizzy.fizz(c);
-            lister.listCounter(out); };
-        },         
-          
-      };
-      
-      document.addEventListener('DOMContentLoaded', lister.szamlalo);
-     
-   </script>
+  <script src="javascripts/fizzy.js"></script>
 </head>
 <body>
 <header>
