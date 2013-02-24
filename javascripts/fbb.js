@@ -12,7 +12,6 @@ function listCounter(msg) {
 }
 
 function fizz(c) {
-    outputContainer = document.getElementById('kimenet');
     var atm = "";
     if (c % 3 == 0) {atm = atm+"Fizz"};
     if (c % 5 == 0) {atm = atm+"Buzz"};
