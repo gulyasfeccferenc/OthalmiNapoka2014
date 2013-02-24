@@ -11,14 +11,20 @@ function listCounter(msg) {
     
 }
 
-function fizz() {
+function fizz(c) {
     outputContainer = document.getElementById('kimenet');
-    for (var c = 1; c <=100; c++) {
-    atm = "";
+    var atm = "";
     if (c % 3 == 0) {atm = atm+"Fizz"};
     if (c % 5 == 0) {atm = atm+"Buzz"};
     if (c % 7 == 0) {atm = atm+"Bizz"};
     listCounter(atm);
+    return atm;
+}
+
+function setUp() {
+    outputContainer = document.getElementById('kimenet');
+    for (var c = 1; c <=100; c++) {    
+    listCounter(fizz.(c));
 }
 
 }
