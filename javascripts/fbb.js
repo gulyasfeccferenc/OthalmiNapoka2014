@@ -30,4 +30,4 @@ function setUp() {
 }
 
 
-document.addEventListener('DOMContentLoaded', fizz);
+document.addEventListener('DOMContentLoaded', setUp);
