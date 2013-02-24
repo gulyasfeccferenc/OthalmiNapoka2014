@@ -3,11 +3,9 @@ var counter;
 var atm;
 
 function listCounter(msg) {
-    var b = document.createElement('b');
     var li = document.createElement('li');
     var br = document.createElement('br');
     li.innerHTML = msg;
-    outputContainer.appendChild(b);
     outputContainer.appendChild(li);
     outputContainer.appendChild(br);
     
