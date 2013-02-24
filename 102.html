@@ -8,14 +8,20 @@
   <link rel="stylesheet" href="javascripts/jasmine/lib/jasmine-1.3.1/jasmine.css">
   <script src="javascripts/jasmine/lib/jasmine-1.3.1/jasmine.js"></script>
   <script src="javascripts/jasmine/lib/jasmine-1.3.1/jasmine-html.js"></script>
+  <script src="javascripts/fbb.js"></script>
 </head>
 <body>
 <header>
   <div id="wrapper"><h1>A FizzBuzzBizz osztály Jasmine-nal való tesztelése</h1><br></div>
-  <div id="HTMLReporter" class="jasmine_reporter">
-    <script></script>
+      <script>
+        describe("FizzBuzzBizz algoritmus működésének tesztelése Jasminnal", function() {
+          it("rendben zajlott.", function(){
+            expect(myFizz.fizz(3)).toBe("Fizz");
+          })
+          })
+      </script>
     
-  </div>
+  
   
   
   </header>
