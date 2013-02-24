@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.11.0.css">
   <script src="javascripts/qunit.js"></script>
   <script src="javascripts/fbb.js"></script>
+  <script>
+    test("myFizzy.fizz", function() {
+      function shouldBe(getted, expected) {
+        equal(myFizzy.fizz(getted),expected);
+      }
+      shouldBe("3", "Fizz");
+    
+    });    
+  </script>
 </head>
 <body>
 <header>
