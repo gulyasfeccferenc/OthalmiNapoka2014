@@ -3,11 +3,13 @@ var counter;
 var atm;
 
 function listCounter(msg) {
+    var b = document.createElement('b');
     var li = document.createElement('li');
-    var br = document.createElement('br')
+    var br = document.createElement('br');
     li.innerHTML = msg;
     outputContainer.appendChild(li);
     outputContainer.appendChild(br);
+    outputContainer.appendChild(b);
 }
 
 function fizz() {
