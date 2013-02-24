@@ -1,5 +1,5 @@
 var myFizzy = {
-    outputContainer: document.getElementById('kimenet'),
+   ,
     
     listCounter: function (msg) {
         var li = document.createElement('li');
@@ -10,6 +10,7 @@ var myFizzy = {
     },
     
     fizz: function(c) {
+    var outputContainer = document.getElementById('kimenet');
     var atm = "";
     if (c % 3 == 0) {atm = atm+"Fizz"};
     if (c % 5 == 0) {atm = atm+"Buzz"};
@@ -17,4 +18,4 @@ var myFizzy = {
     return atm;
     
     },
-}
+};
