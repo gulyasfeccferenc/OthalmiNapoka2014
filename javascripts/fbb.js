@@ -7,9 +7,10 @@ function listCounter(msg) {
     var li = document.createElement('li');
     var br = document.createElement('br');
     li.innerHTML = msg;
+    outputContainer.appendChild(b);
     outputContainer.appendChild(li);
     outputContainer.appendChild(br);
-    outputContainer.appendChild(b);
+    
 }
 
 function fizz() {
