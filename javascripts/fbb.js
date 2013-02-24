@@ -1,14 +1,15 @@
-var outputContainer;
-function listCounter(msg) {
-    var li = document.createElement('li');
-    var br = document.createElement('br');
-    li.innerHTML = msg;
-    outputContainer.appendChild(li);
-    outputContainer.appendChild(br);
+var myFizzy = {
+    outputContainer: null,
     
-}
-
-function fizz(c) {
+    listCounter: function (msg) {
+        var li = document.createElement('li');
+        var br = document.createElement('br');
+        li.innerHTML = msg;
+        myFizzy.outputContainer.appendChild(li);
+        myFizzy.outputContainer.appendChild(br);
+    },
+    
+    fizz: function(c) {
     var atm = "";
     if (c % 3 == 0) {atm = atm+"Fizz"};
     if (c % 5 == 0) {atm = atm+"Buzz"};
@@ -16,14 +17,15 @@ function fizz(c) {
     return atm;
 }
 
-function setUp() {
-    outputContainer = document.getElementById('kimenet');
+    setUp: function() {
+    myFizzy.outputContainer = document.getElementById('kimenet');
     for (var c = 1; c <=100; c++) {    
-    var out = fizz(c);
-    listCounter(out);
+    var out = myFizzy.fizz(c);
+    myFizzy.listCounter(out);
 }
 
 }
 
+}
 
-document.addEventListener('DOMContentLoaded', setUp);
+document.addEventListener('DOMContentLoaded', myFizzy.setUp);
