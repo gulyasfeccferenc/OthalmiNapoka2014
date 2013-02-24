@@ -9,12 +9,15 @@
   <script src="javascripts/qunit.js"></script>
   <script src="javascripts/fbb.js"></script>
   <script>
-    test("myFizzy.fizz", function() {
+    test("FizzBuzzBizz számító algoritmus teszt eredményei: ", function() {
       function shouldBe(getted, expected) {
         equal(myFizzy.fizz(getted),expected);
       }
       shouldBe("3", "Fizz");
-    
+      shouldBe("5", "Buzz");
+      shouldBe("7", "Bizz");
+      shouldBe("105", "FizzBuzzFizz");
+      
     });    
   </script>
 </head>
