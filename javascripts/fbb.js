@@ -1,3 +1,4 @@
+var outputContainer;
 function listCounter(msg) {
     var li = document.createElement('li');
     var br = document.createElement('br');
@@ -16,7 +17,7 @@ function fizz(c) {
 }
 
 function setUp() {
-    var outputContainer = document.getElementById('kimenet');
+    outputContainer = document.getElementById('kimenet');
     for (var c = 1; c <=100; c++) {    
     out = fizz(c);
     listCounter(out);
