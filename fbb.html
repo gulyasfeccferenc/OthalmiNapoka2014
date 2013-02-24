@@ -16,17 +16,18 @@
    <section>
     <script language="javascript"> 
         var lister = {
-                      c : 1,
+                      outputContainer: null,
+                      
                       listCounter: function(msg) {
                       var li = document.createElement('li');
                       var br = document.createElement('br');
                       li.innerHTML = msg;
-                      myFizzy.outputContainer.appendChild(li);
-                      myFizzy.outputContainer.appendChild(br);
+                      lister.outputContainer.appendChild(li);
+                      lister.outputContainer.appendChild(br);
                      }
         
                       szamlalo: function() {
-                        var outputContainer = document.getElementById('kimenet');
+                        outputContainer = document.getElementById('kimenet');
                         alert("szamlalo");
                         for (c = 1; c <=100; c++;) {    
                         var out = myFizzy.fizz(c);
