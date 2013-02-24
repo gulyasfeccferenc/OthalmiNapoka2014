@@ -1,5 +1,6 @@
 var myFizzy = {     
     fizz: function(c) {
+        alert("Fecc");
     var atm = "";
     if (c % 3 == 0) {atm = atm+"Fizz"};
     if (c % 5 == 0) {atm = atm+"Buzz"};
