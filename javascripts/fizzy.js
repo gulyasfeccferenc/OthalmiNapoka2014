@@ -10,7 +10,7 @@
         };
         
         szamlalo: function() {
-          for (c = 1; c <=100; c++;) {    
+          for (c = 1; c <=100; c++) {    
             var out = myFizzy.fizz(c);
             listCounter(out); };
         },         
