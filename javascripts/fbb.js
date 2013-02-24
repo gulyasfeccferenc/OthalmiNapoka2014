@@ -18,7 +18,7 @@ function fizz(c) {
 
 function setUp() {
     outputContainer = document.getElementById('kimenet');
-    for (var c = 1; c <=140; c++) {    
+    for (var c = 1; c <=100; c++) {    
     var out = fizz(c);
     listCounter(out);
 }
