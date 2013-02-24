@@ -1,5 +1,5 @@
 var myFizzy = {
-    outputContainer: null,
+    outputContainer: document.getElementById('kimenet'),
     
     listCounter: function (msg) {
         var li = document.createElement('li');
@@ -15,17 +15,6 @@ var myFizzy = {
     if (c % 5 == 0) {atm = atm+"Buzz"};
     if (c % 7 == 0) {atm = atm+"Bizz"};
     return atm;
+    
     },
-
-    setUp: function() {
-    myFizzy.outputContainer = document.getElementById('kimenet');
-    for (var c = 1; c <=100; c++) {    
-    var out = myFizzy.fizz(c);
-    myFizzy.listCounter(out);
 }
-
-}
-
-}
-
-document.addEventListener('DOMContentLoaded', myFizzy.setUp);
