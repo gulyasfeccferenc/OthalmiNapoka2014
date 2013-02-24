@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="stylesheets/styles.css">
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
   <script src="javascripts/fbb.js"></script>
-  <script src="javascripts/fizzy.js"></script>
+  
 </head>
 <body>
 <header>
@@ -14,7 +14,27 @@
     
   </header>
    <section>
-    <script language"javascript">alert("Fecc");</script>
+    <script language"javascript"> var lister = {
+        c : 1,
+        listCounter: function(msg) {
+          var outputContainer = document.getElementById('kimenet');
+          var li = document.createElement('li');
+          var br = document.createElement('br');
+          li.innerHTML = msg;
+          myFizzy.outputContainer.appendChild(li);
+          myFizzy.outputContainer.appendChild(br);
+        };
+        
+        szamlalo: function() {
+          for (c = 1; c <=100; c++;) {    
+            var out = myFizzy.fizz(c);
+            listCounter(out); };
+        },         
+          
+      };
+      
+      document.addEventListener('DOMContentLoaded', lister.szamlalo);
+    </script>
    <ol id="kimenet">
      
    </ol>
