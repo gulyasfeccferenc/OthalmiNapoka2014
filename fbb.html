@@ -27,9 +27,13 @@
           myFizzy.outputContainer.appendChild(br);
         };
         
-        for (c = 1; c <=100; c++;) {    
-          var out = myFizzy.fizz(c);
-          listCounter(out); };
+        function szamlalo() {
+          for (c = 1; c <=100; c++;) {    
+            var out = myFizzy.fizz(c);
+            listCounter(out); };
+        };  
+          return szamlalo;
+          
       })();
       
       document.addEventListener('DOMContentLoaded', lister);
