@@ -15,7 +15,7 @@ var myFizzy = {
     if (c % 5 == 0) {atm = atm+"Buzz"};
     if (c % 7 == 0) {atm = atm+"Bizz"};
     return atm;
-}
+    },
 
     setUp: function() {
     myFizzy.outputContainer = document.getElementById('kimenet');
