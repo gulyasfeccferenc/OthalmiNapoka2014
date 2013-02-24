@@ -23,8 +23,8 @@
                       var li = document.createElement('li');
                       var br = document.createElement('br');
                       li.innerHTML = msg;
-                      lister.outputContainer.appendChild(li);
-                      lister.outputContainer.appendChild(br);
+                      outputContainer.appendChild(li);
+                      outputContainer.appendChild(br);
                      },
         
                       szamlalo: function() {
@@ -32,7 +32,7 @@
                         alert("szamlalo");
                         for (c = 1; c <=100; c++) { 
                         var out = myFizzy.fizz(c);
-                        lister.listCounter(out); };
+                        listCounter(out); };
                      },       
           
       }
