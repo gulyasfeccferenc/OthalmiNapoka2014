@@ -7,28 +7,26 @@
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
   <script src="javascripts/fbb.js"></script>
   <script>
-     var lister = (function () {
-        var c = 1;
-        
-        function listCounter(msg) {
-          var outputContainer = document.getElementById('kimenet');
+     var lister = {
+        c : 1,
+        listCounter: function(msg) {
           var li = document.createElement('li');
           var br = document.createElement('br');
           li.innerHTML = msg;
-          myFizzy.outputContainer.appendChild(li);
-          myFizzy.outputContainer.appendChild(br);
-        };
+          lister.outputContainer.appendChild(li);
+          lister.outputContainer.appendChild(br);
+        },
         
-        function szamlalo() {
-          for (c = 1; c <=100; c++;) {    
-            var out = myFizzy.fizz(c);
-            listCounter(out); };
-        };  
-          return szamlalo;
+        szamlalo: function() {
+          lister.outputContainer = document.getElementById('kimenet');
+            for (c = 1; c <=100; c++;) {    
+              var out = myFizzy.fizz(c);
+            lister.listCounter(out); };
+        },         
           
-      })();
+      };
       
-      document.addEventListener('DOMContentLoaded', lister);
+      document.addEventListener('DOMContentLoaded', lister.szamlalo);
      
    </script>
 </head>
