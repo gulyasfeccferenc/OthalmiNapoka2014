@@ -1,7 +1,6 @@
-var myFizzy = {
-   ,
-    
+var myFizzy = {    
     listCounter: function (msg) {
+        var outputContainer = document.getElementById('kimenet');
         var li = document.createElement('li');
         var br = document.createElement('br');
         li.innerHTML = msg;
@@ -10,12 +9,11 @@ var myFizzy = {
     },
     
     fizz: function(c) {
-    var outputContainer = document.getElementById('kimenet');
     var atm = "";
     if (c % 3 == 0) {atm = atm+"Fizz"};
     if (c % 5 == 0) {atm = atm+"Buzz"};
     if (c % 7 == 0) {atm = atm+"Bizz"};
-    return atm;
-    
+    return atm;    
     },
+    
 };
