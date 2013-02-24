@@ -1,5 +1,9 @@
 describe("Algoritmustesztelés:", function() {
- it("Fizz = 3 értékre", function() {
+ it("FizzBuzzBizz értékekre", function() {
+   expect(true).toBe(true);
+   expect(true).toBe(true);
+   expect(true).toBe(true);
+   expect(true).toBe(true);
    expect(true).toBe(true);
  });
 });
