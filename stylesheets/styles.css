@@ -310,6 +310,7 @@ footer {
   padding: 20px 0 0;
   color: #ccc;
   overflow: hidden;
+  background: url('http://jquery.com/jquery-wp-content/themes/jquery/images/bg-footer-noise.jpg') fixed;
 }
 footer a {
   color: #fff;
