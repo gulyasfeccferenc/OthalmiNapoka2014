@@ -1,1 +1,1 @@
-### GitHub Pages README file
+### Webfejlesztés a gyakorlatban speciálkollégium számára készült statikus weboldal

@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Pulinak by gulyasfeccferenc</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/001.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Pulinak</h1>
+        <p>Webfejlesztés a gyakorlatban</p>
+        <p class="view"><a href="https://github.com/gulyasfeccferenc/pulinak">Nézd meg a GitHubon! <small>gulyasfeccferenc/pulinak</small></a></p>
+              </header>
+      <section>
+        <a name="elso"></a><h2>Hogyan készült #1: </h2><br>
+        <h3>1: </h3>
+        <p> Az első feladat a képen szereplő kutya táncra bírása. Ehhez először is a .html oldalunkra
+            létrehozunk egy képet, majd adunk neki egy tetszőleges iD-t (esetünkben <i>kephely</i>), a
+            későbbi azonosítás érdekében.</p>
+            
+            <textarea rows="8" cols="72" readonly disabled contenteditable="false" resize="none">
+<html>
+  <head>
+    Ide jön az oldal címe!
+  </head>
+  <body>
+    <img id="kephely" src="images/01.jpg"></img>
+  </body>
+</html></textarea><br>
+            <br><h3>2: </h3>
+            <p>Következhet a javascript parancs megírása, amit majd egy külön *.js fájlba mentünk el.
+              Mivel a képeket tömbben kezeljük, ezért a léptetéshez először is egy számlálót vezetünk be,
+              majd az értékét nullára állítjuk, hogy a tömb első elemével kezdjük. (A tömbök számozása 0-val kezdődik.)
+              Gyorsan hozzunk is létre egy új tömböt és töltsük fel a képkockák gyors egymásutánjával! Ehhez
+              a forrásfájlok elérési útját és nevét kell idézőjelek között megadnunk, vesszővel elválasztva!
+              <br>Figyeljünk a sorvégi pontosvesszőkre!</p>
+              
+              <textarea rows="3" cols="72" readonly disabled contenteditable="false" resize="none">
+var szamlalo=0;
+var forras=new Array("kep1.jpg","kep2.jpg","kep3.jpg");
+                    </textarea>
+            
+              <br><h3>3: </h3>
+              <p>Hozzunk létre egy függvényt, ami megszerzi a szükséges információkat a hívó oldalról. 
+              Szükségünk lesz a korábban megadott ID-re, hogy a képünket forrását (src) cserélgetni tudjuk.
+              Ha tudattuk a függvénnyel, hogy milyen elemről beszélünk, ideje lesz megadnunk, hogy miért is kerestük,
+              lássuk el egy eseményfigyelővel (EventListener) mely egyből figyelmezteti a függvényt, ha bekövetkezne a
+              feltételben adott esemény. Lássuk, mit csináltunk eddig: </p>
+              <textarea rows="8" cols="72" readonly disabled contenteditable="false" resize="none">
+var szamlalo=0;
+var forras=new Array("kep1.jpg","kep2.jpg","kep3.jpg");
+
+function setUp() {
+  kep = document.getElementById('kephely');
+  kep.addEventListener('click', onClick);
+  }
+                    </textarea><br>
+                    <br><h3>4: </h3>
+              <p>Hozzuk létre az eseménykezelő függvényt, ami majd lépteti a képet. Mivel az oldalunkon már ott van a
+              tömb első elemeként megadott kép, ezért a függvényt egy inkrementálással kezdjük. Ezután egy rövid
+              ellenőrzés, hogy nem léptük-e túl a tömb által megszabott korlátokat (tombneve.length a tömb hossza).
+              Ha a számláló értéke nem nagyobb a tömb maximális elemszámánál, akkor cseréljük ki a kép forrását a tömbben
+              szereplő következő képforrással. Amennyiben elértük az utolsó elemet, akkor nullázzuk le a számlálót,
+              különben hibába futhatunk!
+              Ha mindezekkel megvagyunk, már csak gondoskodnunk kell róla, hogy elinduljon a képünk azonosítása. Erről
+              a kódsor utolsó sora gondoskodik.</p>
+              <textarea rows="15" cols="72" readonly disabled contenteditable="false" resize="none">
+var szamlalo=0;
+var forras=new Array("kep1.jpg","kep2.jpg","kep3.jpg");
+
+function setUp() {
+  kep = document.getElementById('kephely');
+  kep.addEventListener('click', onClick);
+  }
+
+function onClick(ev) {
+  ++szamlalo;
+  if(szamlalo<forras.length){
+    kep.src=forras[szamlalo];}
+  else {szamlalo=0;kep.src=forras[szamlalo];}
+}
+document.addEventListener('DOMContentLoaded', setUp);
+</textarea><br><hr>
+           
+<a name="masodik"></a><h2>Hogyan készült #2: </h2><br>
+        
+        <p align="justify">A második feladat annyiban különbözik az előzőtől, hogy egy saját névteret (namespace) kell létrehoznunk
+          a scriptünkhöz. Hosszabb kódok esetében ez nagyban megkönnyít(het)i a kódunk olvashatóságát.
+          Miután létrehoztuk a névterünket csupán az előző gondolatsor alapján kell átírnunk a szkriptünket, hogy 
+          illeszkedjen a névtér szemantikájához. A kódrészletben a myNS jelöli a saját névterünket.
+          Figyeljünk arra, hogy a névterünk függvényeire a névtérneve.függvényneve alakban hivatkozhatunk.
+          Ugyanígy a többi elemet is hasonló gondolatmenet szerint érjük el. Lássuk:
+        </p>
+        <textarea rows="20" cols="72" readonly disabled contenteditable="false" resize="none">
+var myNS = {
+  szamlalo:0, //Pontosvessző helyett vessző zárja a sorokat!
+
+  forras:['kep1.jpg','kep2.jpg','kep3.jpg'],
+  
+  onClick: function() {
+    ++myNS.szamlalo;
+    if(myNS.szamlalo<myNS.forras.length){
+      myNS.kep.src=myNS.forras[myNS.szamlalo]; }
+    else {myNS.szamlalo=0; myNS.kep.src=myNS.forras[myNS.szamlalo];}
+  },
+
+  setUp: function() {
+    myNS.kep = document.getElementById('kephely');
+    myNS.kep.addEventListener('click', myNS.onClick);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', myNS.setUp); </textarea>
+
+<a name="harmadik"></a><h2>Hogyan készült #3: </h2><br>
+        <p>A harmadik feladat szerint privát függvénnyel(függvényekkel) kell megoldanunk a korábbi problémát.
+          Ha az első kódsort vesszük alapul, nem sok módosítást kell elvégeznünk. Csupán beágyazzuk egy functionba
+          a korábbi kódsorozat lényegi részét. Fontos, hogy az inicializáló függvényt (jelen esetben setUp névre hallgat)
+          visszaadjuk a hívő félnek. Ezenfelül a fő function zárójelei után még egy zárójelpár kerül, hogy a függvényünk
+          csak egyszer hajtódjon végre.
+          
+        </p>
+        <textarea rows="23" cols="72" readonly disabled contenteditable="false" resize="none">
+var myS = (function() {
+  var szamlalo;
+  szamlalo=0;
+
+  var forras=new Array("kep1.jpg","kep2.jpg","kep3.jpg");
+  
+  function onClick(ev) {
+    ++szamlalo;
+    if(szamlalo<forras.length){
+      kep.src=forras[szamlalo];}
+    else {szamlalo=0;kep.src=forras[szamlalo];}
+  }
+
+  function setUp() {
+    kep = document.getElementById('kephely');
+    kep.addEventListener('click', onClick);
+  }
+  return setUp;
+})();
+
+document.addEventListener('DOMContentLoaded', myS);
+        </textarea></forras></section>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
