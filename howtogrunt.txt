@@ -1,0 +1,25 @@
+A Grunt és bővítményei telepítéséhez és kezeléséhez a Node.js csomagkezelőjére az npm-re lesz szükségünk. (A leírás a Grunt 0.4.x verziókhoz vonatkozik, más esetekben eltérő parancsok is előfordulhatnak)
+<h2>Node.js csomagkezelő (npm)</h2>
+A Grunt telepítése előtt a Node.js csomagkezelőjét kell telepítenünk. Ehhez látogassunk el a http://nodejs.org/ oldalra, majd kövessük az utasításokat. Unix rendszerek alatt a következő a teendőnk:
+-Letöltjük a legfrissebb verziót az Install felíratú gombra kattintva
+-Nyitunk egy terminált a kicsomagolt mappában
+-<code>./configure</code>
+-<code>make</code>
+-<code>make install</code>
+Ha minden sikeres, akkor már folytathatjuk is a Grunt telepítésével!
+
+<h2>A Grunt parancssor telepítése</h2>
+Ha korábban már telepítve volt Grunt, akkor először el kell távolítani
+<code>npm uninstall -g grunt</code>
+A parancsértelmező helyes telepítésének érdekében esetleg ki kell adnod a 'sudo' parancsot, Windows környezetben pedig Rendszergazdai módban kell futtatni a Parancssort.
+<code>npm install -g grunt-cli</code>
+Ez a grunt-ot a rendszerútvonalak közé helyezi, így bárhonnan futtathatod.
+<h2>Egy új grunt project előkészítése</h2>
+Egy átlagos telepítés a package.json és a Gruntfile projektedhez való hozzáadásával jár.
+<b>package.json</b> Ezt a fájlt használja az npm, hogy eltárolja a metaadatokak és a függőségeket.
+Gruntfile: Ez a fájl lehet Gruntfile.js vagy Gruntfile.coffee, ez felelős a feladatok és Grunt bővítmények betöltéséért és konfigurálásáért.
+<h2>package.json</h2>
+Ez a fájl a projektkönyvtárad gyökerében, a Gruntfile mellett foglal helyet és a projekted függőségeit (devDependencies) tárolja. Ha az npm install futtatod a package.json-t tartalmazó mappában, akkor az összes függőséget úgy telepíti, ahogy az fel van sorolva benne.
+Többféleképpen is elkészíthetjük package.json fájlunkat:
+- A legtöbb grunt-init sablon automatikusan elkészíti a projekt-specifikus package.json fájlt
+- Az npm init parancs egy egyszerű package.json fájlt hoz létre. Ezt kibővítve juthatunk legegyszerűbben saját csomagfájlunkhoz.

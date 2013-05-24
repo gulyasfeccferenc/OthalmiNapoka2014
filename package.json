@@ -1,0 +1,20 @@
+{
+  "name": "gulyasfeccferenc.github.com",
+  "version": "0.0.1",
+  "description": "Webfejlesztés a gyakorlatban kurzus számára készült weboldal",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gulyasfeccferenc/gulyasfeccferenc.github.com.git"
+  },
+  "author": "Gulyás \"Fecc\" Ferenc",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "ce7d5b242c76aad4d589610713a0a882bc435602",
+  "bugs": {
+    "url": "https://github.com/gulyasfeccferenc/gulyasfeccferenc.github.com/issues"
+  }
+}
