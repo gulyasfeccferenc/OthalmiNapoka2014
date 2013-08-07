@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="src/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="src/css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
     <link href="src/css/cosmos.css" rel="stylesheet" media="screen">
     <script src="src/js/jquery.min.js"></script>
     <style>
       body{background-color:#000000;height:100%;margin:0px;padding-top:120px;background-image:url('src/img/bcgrnd1.jpg');}
-      
+     #carousel{background-color: :#000000;}
     </style>
   </head>
   <body>
@@ -29,7 +30,8 @@
             <div class="nav-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Bázis</a></li>
-                <li><a data-toggle="modal" href="#myModal">Jelentkezés</a></li>
+                <li><a href="https://www.facebook.com/events/495876977166326/" target="_blank">Facebook</a></li>
+                <li><a data-toggle="modal" href="#golyaModal">Jelentkezés</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigáció <b class="caret"></b></a>
                   <ul class="dropdown-menu">
@@ -48,48 +50,82 @@
       </div>
     </div>
 
-     <!-- Modal -->
-  <div class="modal fade" id="myModal">
+     <!-- Gólya regisztrációs form -->
+  <div class="modal fade" id="golyaModal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times; Mégsem</button>
           <h4 class="modal-title">Gólyatábor jelentkezés</h4>
         </div>
         <div class="modal-body">
-          #TODO: Gólyatábor jelentkezési form 
+
+          <div class="form-group">
+            <label for="golyaNev">Teljes név</label>
+             <input type="text" class="form-control" id="golyaNev" placeholder="Add meg a teljes neved...">
+          </div>
+          <div class="form-group">
+            <label for="golyaMail">Email cím</label>
+             <input type="text" class="form-control" id="golyaMail" placeholder="Az e-mail címed, amin elérhetünk...">
+          </div>
+          <div class="form-group">
+            <label for="golyaTel">Telefon</label>
+             <input type="text" class="form-control" id="golyaTel" placeholder="Telefonszám, amin elérhetünk...">
+          </div>
+          <div class="form-group">
+            <label for="golyaSzak">Szak</label>
+             <input type="text" class="form-control" id="golyaSzak" placeholder="A szak, ahová felvételt nyertél...">
+          </div>
+          <div class="form-group">
+            <label for="golyaBeiratkozas">Beíratkozás ideje</label>
+             <input type="date" class="form-control" id="golyaBeiratkozas" >
+             <span class="help-block">Elviszünk beíratkozni meg minden!</span>
+          </div>
+          <div class="form-group">
+            <label for="golyaEsku">Eskütétel ideje</label>
+             <input type="date" class="form-control" id="golyaEskü" >
+             <span class="help-block">Csak, hogy tudjuk mikorra kell kijózanodnod</span>
+          </div>
+          <div class="form-group">
+            <label for="golyaKep">Igazolványkép</label>
+             <input type="file" class="form-control" id="golyaKep" >
+             <span class="help-block">Egy kép a belépőkártyádhoz, ami alapján felismer a biztonsági rendszerünk</span>
+          </div>
+
+
+
         </div>
         <div class="modal-footer">
-          <a href="#" class="btn">Bezárás</a>
+          
           <a href="#" class="btn btn-primary">Kész vagyok, kapitány!</a>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+  </div><!-- /Gólya regform vége -->
 
-
-    <!-- Carousel
+      <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarouse2" data-slide-to="1"></li>
+        <li data-target="#myCarouse3" data-slide-to="2"></li>
+
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img src="src/img/othalmia01.jpg" alt="0">
+          <img src="src/img/bcgrnd3.jpg" alt="0" class="img-responsive">
           <div class="container">
             <div class="carousel-caption">
               <h1>Terraformálás Öthalmián!</h1>
               <p>Szeretnél tagja lenni az égitest élhetővé alakításában? Megismerni a legkorszerűbb terraformálási eljárásokat? Kinyerni a hatalmas mennyiségű etanolt a légkörből?</p>
-              <p><a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Jelentkezz még ma!</a></p>
+              <p><a data-toggle="modal" href="#golyaModal" class="btn btn-primary btn-large">Jelentkezz még ma!</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="src/img/othalmia01.jpg" alt="1">
+          <img src="src/img/bcgrnd2.jpg" alt="1" class="img-responsive">
           <div class="container">
             <div class="carousel-caption">
               <h1>Bázis</h1>
@@ -98,12 +134,13 @@
             </div>
           </div>
         </div>
+        
         <div class="item">
-          <img src="src/img/othalmia01.jpg" alt="2">
+          <img src="src/img/bcgrnd3.jpg" alt="2" class="img-responsive">
           <div class="container">
             <div class="carousel-caption">
               <h1>Augusztus 27-30</h1>
-              <p>Maradt még kérdésed? Igyekszünk mindenre válaszolni!</p>
+              <p>Maradt még kérdésed? Igyekszünk mindenre válaszolni! Keress minket <a href="https://www.facebook.com/events/495876977166326/" target="_blank"></a>Facebookon is</p>
               <p><a class="btn btn-large btn-primary" href="#other">Itt!</a></p>
             </div>
           </div>
@@ -115,30 +152,28 @@
 
 
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+   
 
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="src/img/othalmia_140_01.jpg">
+          <a href="#othalmia"><img class="img-circle" src="src/img/othalmia_140_01.jpg"></a>
           <h2>Öthalmia</h2>
           <p>Bővebb információk a kollégiumról és környékéről</p>
           <p><a class="btn btn-default" href="#othalmia">Öthalmia &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="src/img/othalmia_140_02.jpg">
+          <a href="#terraform"><img class="img-circle" src="src/img/othalmia_140_02.jpg"></a>
           <h2>Terraformálás</h2>
           <p>A Gólyatáborral kapcsolatos további fontos információk</p>
           <p><a class="btn btn-default" href="#terraform">Terraformálás &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="src/img/othalmia_140_03.jpg">
-          <h2>Egyéb információk</h2>
-          <p>Egyéb hasznos információk a kollégiumi élettel kapcsolatban</p>
+          <a href="#other"><img class="img-circle" src="src/img/othalmia_140_03.jpg"></a>
+          <h2>Hiperűrugrás</h2>
+          <p>Hogyan találhatod meg Öthalmiát az éterben</p>
           <p><a class="btn btn-default" href="#other">Egyéb &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
@@ -146,39 +181,76 @@
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
+      <hr id="othalmia" class="featurette-divider">
 
-      <div id="othalmia" class="featurette">
-        <img class="featurette-image img-circle pull-right" data-src="holder.js/512x512">
-        <h2 class="featurette-heading">Segediensis legnagyobb holdja <span class="text-muted">Öthalmia</span></h2>
-        <p class="lead">Központi bolygó: Segediensis
-Típus: kőzetbolygó
-Légnyomás: megfelelő
-Légkör: megfelelő ( 78%N, 21%O, 1%etanol)
-Kinyerhető nyersanyag: a légkörben levő nagymennyiségű etanol
-Terraformálásra alkalmas!
-Felderítő szenzoraink a holdat emberi szempontból értékesnek találták.
-A légkörben levő nagymennyiségű etanol egy 4 napos küldetés során kinyerhető.
-Hiba! A hold terraformálóinak elhelyezésére szolgáló épületeket létrehozó szondákkal és egységekkel a kapcsolat csillagidő szerint 350655.9-kor megszakadt ismeretlen okokból.
-Bár a kapcsolat megszakadt az Öthalmiai egységgel, a terraformálók elhelyezésére szolgáló épületek majdnem befejeződtek.
-Ezennel elrendelem a hold terraformálásának második fáisát.
-A terraformáló egységek érkezése várhatóan csillagidő szerint 310740.8-kor történik.</p>
+      <div  class="featurette">
+        <img class="img-rounded img-responsive pull-right " src="kolikepek/oth.ujep.01.jpg">
+        <h2 class="featurette-heading">Szegediensis legnagyobb holdja <span class="text-muted">Öthalmia</span></h2>
+        
+        
       </div>
 
-      <hr class="featurette-divider">
-
-      <div id="terraform" class="featurette">
-        <img class="featurette-image img-circle pull-left" data-src="holder.js/512x512">
+      <hr id="terraform" class="featurette-divider">
+      <div  class="featurette">
+        <img class="featurette-image img-rounded pull-left" src="src/img/we_want_U2.jpg">
         <h2 class="featurette-heading">'13 augusztus 27-30 <span class="text-muted">Terraformálás</span></h2>
         <p class="lead">Ne maradj le a nyár legnagyobb bulijáról!</p>
+        <h4><ul class="list-unstyled">
+          <li><strong>"</strong> Központi bolygó: Szegediensis</li>
+          <li>Típus: kőzetbolygó</li>
+          <li>Légnyomás: megfelelő</li>
+          <li>Légkör: megfelelő ( 78%N, 21%O, 1%etanol)</li>
+          <li>Kinyerhető nyersanyag: a légkörben levő nagymennyiségű etanol</li>
+          <li class="text-success">Terraformálásra alkalmas!</li><br>
+        <ul class="list-unstyled"><li>
+        Felderítő szenzoraink a holdat emberi szempontból értékesnek találták.
+        A légkörben levő nagymennyiségű etanol egy 4 napos küldetés során kinyerhető!</li>
+        <li class="text-danger">A hold terraformálóinak elhelyezésére szolgáló épületeket létrehozó szondákkal és egységekkel a kapcsolat csillagidő szerint 350655.9-kor megszakadt ismeretlen okokból.</li>
+        <li>Bár a kapcsolat megszakadt az Öthalmiai egységgel, a terraformálók elhelyezésére szolgáló épületek munkálatai befejeződtek.</li>
+        <li class="text-success">
+        Ezennel elrendelem a hold terraformálásának második fáisát.
+        A terraformáló egységek érkezése várhatóan csillagidő szerint <abbr title="2013.08.26. - 2013.08.30. között" class="initialism">310740.8</abbr>-kor történik. "<small>--Részlet <strong>Sgt. Andor</strong> jelentéséből</small></li></ul></h4><br>
+        <p class="lead">Téged is várunk egy feledhetetlen gólyatáborba, ahol:<br><br>
+        
+       
+          <span class="glyphicon glyphicon-ok">   szórakoztató programokban ismerkedhetsz meg leendő kollégiumi társaiddal<br>
+          <span class="glyphicon glyphicon-ok">   bepillantást nyerhetsz az Öthalmiak életébe<br>
+          <span class="glyphicon glyphicon-ok">   terraformálhatsz egy holdat<br>
+          <span class="glyphicon glyphicon-ok">   felejthetetlen élményekkel gazdagodsz<br>
+          <span class="glyphicon glyphicon-ok">   nem hagyjuk, hogy éhezz vagy kiszáradj<br>
+          <span class="glyphicon glyphicon-ok">   elviszünk beíratkozni<br>
+          <span class="glyphicon glyphicon-ok">   segítünk a kurzusfelvételben (órarend összeállítása, ETR használata, etc.)<br>
+          <span class="glyphicon glyphicon-ok"> esténként bulik, koncertek várnak!
+       <br><br>
+        A tábor költsége <strong>6000 HUF</strong>, ami magában foglalja:<br><br>
+        
+          <span class="glyphicon glyphicon-star"> a szállást<br>
+          <span class="glyphicon glyphicon-star"> étkezést (1 hideg + 2 főtt)<br>
+          <span class="glyphicon glyphicon-star"> státuszszimbólumnak számító, menő ÖthalmiGT-s pólót<br>
+          <span class="glyphicon glyphicon-star"> az egész napos programokat<br>
+          <span class="glyphicon glyphicon-star"> az esti bulikat, koncerteket<br>
+          <span class="glyphicon glyphicon-star"> egy vízipisztolyt<br><br>
+          <br><br>
+          Ajánlott hozni a gólyatáborba fürdő- és 'játszós' ruhát, illetve mindent, ami a beköltözéshez szükséges (konyhai eszközök, evőeszközök, piperekellékek, ruhák, etc.). Ágynemű, párna, takaró, kislámpa, lavór, ruhaszárító <strong>NEM</strong> kell, ezeket biztosítjuk.<br><br>
+          <h3>Érkezés: <span class="text-muted">2013 augusztus 27. (kedd) 8-16 óra között</span></h3>
+          <p class="text-center"><a data-toggle="modal" href="#golyaModal" class="btn btn-info btn-large">Jelentkezem!</a></p>
+        
+      </p>
       </div>
 
-      <hr class="featurette-divider">
+      <hr id="other" class="featurette-divider">
 
-      <div id="other"class="featurette">
-        <img class="featurette-image img-circle pull-right" data-src="holder.js/512x512">
+      <div class="featurette">
+        <p class="pull-right img-rounded"><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=46.277697,20.097823&amp;daddr=&amp;hl=en&amp;geocode=&amp;sll=46.275539,20.099359&amp;sspn=0.005888,0.009645&amp;mra=mift&amp;mrsp=0&amp;sz=17&amp;ie=UTF8&amp;t=t&amp;ll=46.277771,20.097942&amp;spn=0.005191,0.00912&amp;z=16&amp;output=embed"></iframe></p>
         <h2 class="featurette-heading">Hiperűrugrás <span class="text-muted">Öthalmiára</span></h2>
-        <p class="lead">Egyéb hasznos információk. Idejutás, bla-bla</p>
+        <p class="lead">Hogyan találsz ide?
+          <br><br><strong>Vasút</strong><br> Nagyállomás <span class="glyphicon glyphicon-arrow-right"></span> 1-es vagy 2-es villamossal a <strong>Damjanich utca</strong> megállóig <span class="glyphicon glyphicon-arrow-right"></span> átszállás a 79-es buszra<br><br>
+         <strong>Busz</strong><br>Mars tér (buszpályaudvar) <span class="glyphicon glyphicon-arrow-right"></span> 79-es helyközi járat (kb. 15-20 perc) <span class="glyphicon glyphicon-arrow-right"></span> az Auchan utáni második megállónál (<strong>Öthalmi Diáklakások megálló</strong>) kell leszállnod és követni a jelzéseket (1-2 perc séta) <br><p class="lead text-success">Mindkét helyszínen 10 és 14 óra között kollégisták várnak titeket.</p><br><br><p class="lead">
+         <strong>A kollégium pontos címe:</strong><br>
+         Budapesti út 5.<br>
+         Szeged, 6728
+         <br><br>Csatlakozz a Facebook eseményhez, ahol további információkkal gazdagodhadsz, illetve megtudhatod kik jönnek még az <a href="https://www.facebook.com/events/495876977166326/" target="_blank">Öthalmi Gólyatáborba!</a>
+       </p>
       </div>
 
       <hr class="featurette-divider">
@@ -188,8 +260,16 @@ A terraformáló egységek érkezése várhatóan csillagidő szerint 310740.8-k
 
       <!-- FOOTER -->
       <footer>
+          <p class="pull-right"><address>
+            <strong>Öthalmi Diáklakások</strong><br>
+            Budapesti út 5.<br>
+            Szeged, 6728<br>
+            <strong><span class="glyphicon glyphicon-phone"></span>:</strong> +36 62 462 786<br>
+            <strong>@:</strong><a href="mailto:othalom@halom.u-szeged.hu">othalom@halom.u-szeged.hu</a>
+          </address>
+        </p>
         <p class="pull-right"><a href="#">Az oldal tetejére</a></p>
-        <p>&copy; 2013 Gulyás Ferenc &middot; <a href="https://www.facebook.com/events/495876977166326/">Facebook</a></p>
+        <p class="clearfix">&copy; 2013 Gulyás Ferenc &middot; <a href="https://www.facebook.com/events/495876977166326/" target="_blank">Facebook</a></p>
       </footer>
 
     </div><!-- /.container -->
@@ -197,6 +277,7 @@ A terraformáló egységek érkezése várhatóan csillagidő szerint 310740.8-k
 
 
     <!-- JavaScript plugins (requires jQuery) -->
+
    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="src/js/jquery.min.js"></script>
