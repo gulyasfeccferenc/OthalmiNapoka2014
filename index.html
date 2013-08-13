@@ -60,18 +60,18 @@
           <h4 class="modal-title">Gólyatábor jelentkezés</h4>
         </div>
         <div class="modal-body">
-            <form id="golyaJelentkezes" name="golyaJelentkezes" action="jk.php" onsubmit="submit" method="post">
+            <form id="golyaJelentkezes" name="golyaJelentkezes" action="jk.php" onsubmit="submit" method="POST">
           <div class="form-group">
             <label for="golyaNev">Teljes név</label>
-             <input type="text" class="form-control" id="golyaNev" placeholder="Add meg a teljes neved...">
+             <input type="text" class="form-control" id="golyaNev" name="golyaNev" placeholder="Add meg a teljes neved...">
           </div>
           <div class="form-group">
             <label for="golyaMail">Email cím</label>
-             <input type="text" class="form-control" id="golyaMail" placeholder="Az e-mail címed, amin elérhetünk...">
+             <input type="text" class="form-control" id="golyaMail" name="golyaMail" placeholder="Az e-mail címed, amin elérhetünk...">
           </div>
           <div class="form-group">
             <label for="golyaTel">Telefon</label>
-             <input type="text" class="form-control" id="golyaTel" placeholder="Telefonszám, amin elérhetünk...">
+             <input type="text" class="form-control" id="golyaTel" name="golyaTel" placeholder="Telefonszám, amin elérhetünk...">
           </div>
           <div class="form-group">
             <label for="golyaSzak">Szak</label>
@@ -98,12 +98,10 @@
             <span class="help-block">Minden egyéb információ (speciális étrend, allergia, betegség, gyógyszerek, stb.)
             </div>
         </div>
-        <div class="form-group">
-          <label type="textbox" hidden="true" id="golyaMail"></label>
-        </div>
         <div class="modal-footer">
           <input type="submit" class="hidden">
           <a type="button" onclick="validateForm()" class="btn btn-primary">Kész vagyok, kapitány!</a>
+        </form>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
