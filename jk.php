@@ -1,15 +1,18 @@
 <?php
 $to = 'gulyasfeccferenc@gmail.com';
 $from = "GólyaForm";
-$golyaNev = trim($_POST['golyaNev']) . "\n <br>";
-echo $golyaNev;
+$golyaNev = trim($_POST['golyaNev']);
 $golyaMail = trim($_POST['golyaMail']);
-echo $golyaMail;
 $golyaTel = trim($_POST['golyaTel']);
-echo $golyaTel;
 $subject = "GT: $golyaNev";
-echo $subject;
-$sent = mail($to,$subject,$golyaMail,"From: Fecc");
+$golyaSzak = trim($_POST['golyaSzak']);
+$golyaBeir = trim($_POST['golyaBeiratkozas']);
+$golyaEsku = trim($_POST['golyaEsku']);
+$megjegyzes = trim($_POST['golyaEgyeb']);
+
+$message = "<div class=\"container\"><h3>" . $golyaNev . "</h3><br> E-mail: ".$golyaMail."<br> Tel: ".$golyaTel."<br> Szak: ".$golyaSzak."<br> Beíratkozás: ".$golyaBeir."<br> Eskütétel: ".$golyaEsku."<br> Egyéb: ".$megjegyzes."</div>";
+echo $message;
+$sent = mail($to,$golyaNev,$message,"From: gt.othalmidiaklakasok.hu");
 
 if($sent)
 	{print "<!DOCTYPE html>
@@ -31,8 +34,11 @@ if($sent)
     </style>
   </head>
   <body>
-   
-   
+  <div class=\"navbar-wrapper\">
+      <div class=\"container\">
+   <div class=\"text-success\">Sikeresen jelentkeztél!</div><br>
+   <a class=\"btn btn-default\" href=\"http://gt.othalmidiaklakasok.hu\">Vissza</a>
+   </div></div>
   </body>
 </html>";}
 else {
@@ -57,7 +63,9 @@ else {
   <body>
    <div class=\"navbar-wrapper\">
       <div class=\"container\">
-   Valami hiba történt! Próbáld újra később, vagy jelentkezz e-mailben az othalomgt@gmail.com-on!
+      <div class=\"text-success\">Valami hiba történt! Próbáld újra később, vagy jelentkezz e-mailben az othalomgt@gmail.com-on!</div><br>
+   <a class=\"btn btn-default\" href=\"http://gt.othalmidiaklakasok.hu\">Vissza</a>
+   
   </div></div>
   </body>
 </html>";
