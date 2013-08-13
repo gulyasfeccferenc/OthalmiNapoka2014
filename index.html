@@ -10,9 +10,10 @@
     <link href="src/css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
     <link href="src/css/cosmos.css" rel="stylesheet" media="screen">
     <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/validate.js"></script>
     <style>
       body{background-color:#000000;height:100%;margin:0px;padding-top:120px;background-image:url('src/img/bcgrnd1.jpg');}
-     #carousel{background-color: :#000000;}
+     div .featurette{background-color: :#ffffff !important;}
     </style>
   </head>
   <body>
@@ -59,7 +60,7 @@
           <h4 class="modal-title">Gólyatábor jelentkezés</h4>
         </div>
         <div class="modal-body">
-
+            <form id="golyaJelentkezes" name="golyaJelentkezes" action="jk.php" onsubmit="submit" method="post">
           <div class="form-group">
             <label for="golyaNev">Teljes név</label>
              <input type="text" class="form-control" id="golyaNev" placeholder="Add meg a teljes neved...">
@@ -83,7 +84,7 @@
           </div>
           <div class="form-group">
             <label for="golyaEsku">Eskütétel ideje</label>
-             <input type="date" class="form-control" id="golyaEskü" >
+             <input type="date" class="form-control" id="golyaEsku" >
              <span class="help-block">Csak, hogy tudjuk mikorra kell kijózanodnod</span>
           </div>
           <div class="form-group">
@@ -91,13 +92,18 @@
              <input type="file" class="form-control" id="golyaKep" >
              <span class="help-block">Egy kép a belépőkártyádhoz, ami alapján felismer a biztonsági rendszerünk</span>
           </div>
-
-
-
+          <div class="form-group">
+            <label for="golyaEgyeb">Megjegyzés</label>
+            <input type="textbox" class="form-control" id="golyaEgyeb" min="250">
+            <span class="help-block">Minden egyéb információ (speciális étrend, allergia, betegség, gyógyszerek, stb.)
+            </div>
+        </div>
+        <div class="form-group">
+          <label type="textbox" hidden="true" id="golyaMail"></label>
         </div>
         <div class="modal-footer">
-          
-          <a href="#" class="btn btn-primary">Kész vagyok, kapitány!</a>
+          <input type="submit" class="hidden">
+          <a type="button" onclick="validateForm()" class="btn btn-primary">Kész vagyok, kapitány!</a>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
