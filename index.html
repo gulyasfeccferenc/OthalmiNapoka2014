@@ -1,283 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>OGT13</title>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Language" content="hu">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="src/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="src/css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
-    <link href="src/css/cosmos.css" rel="stylesheet" media="screen">
-    <script src="src/js/jquery.min.js"></script>
-    <script src="src/js/validate.js"></script>
-    <style>
-      body{background-color:#000000;height:100%;margin:0px;padding-top:120px;background-image:url('src/img/bcgrnd1.jpg');}
+    <meta name="description" content="Öthalmi Napok - 2014">
+    <meta name="author" content="Fecc">
+    <link rel="shortcut icon" href="img/ico/favicon.png">
 
-     div .featurette{background-color: :#ffffff !important;}
-    </style>
+    <title>Öthalmi Napok 2014</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/on.css" rel="stylesheet">
+
+
   </head>
+
   <body>
-      <div class="navbar-wrapper">
-      <div class="container">
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <a class="navbar-brand" href="#">5GT '13</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Bázis</a></li>
-                <li><a href="https://www.facebook.com/events/495876977166326/" target="_blank">Facebook</a></li>
-                <li><a data-toggle="modal" href="#golyaModal">Jelentkezés</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigáció <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    
-                    <li><a href="http://othalmidiaklakasok.hu">Öthalmia</a></li>
-                    <li><a href="#terraform">Terraformálás</a></li>
-                    <li><a href="#other">Hasznos információk</a></li>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+     <!-- Teljesoldalas kezdőkép -->
+    <div id="top" class="header">
+      <div class="vert-text">
+        <h1>Öthalmi napok</h1>
+        <h3>2014</h3>
+        <a href="#program" class="btn btn-default btn-lg">Programok</a>
       </div>
     </div>
-
-     <!-- Gólya regisztrációs form -->
-  <div class="modal fade" id="golyaModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times; Mégsem</button>
-          <h4 class="modal-title">Gólyatábor jelentkezés</h4>
-        </div>
-        <div class="modal-body">
-            <form id="golyaJelentkezes" name="golyaJelentkezes" action="jk.php" onsubmit="submit" method="POST">
-          <div class="form-group">
-            <label for="golyaNev">Teljes név</label>
-             <input type="text" class="form-control" id="golyaNev" name="golyaNev" placeholder="Add meg a teljes neved...">
-          </div>
-          <div class="form-group">
-            <label for="golyaMail">Email cím</label>
-             <input type="text" class="form-control" id="golyaMail" name="golyaMail" placeholder="Az e-mail címed, amin elérhetünk...">
-          </div>
-          <div class="form-group">
-            <label for="golyaTel">Telefon</label>
-             <input type="text" class="form-control" id="golyaTel" name="golyaTel" placeholder="Telefonszám, amin elérhetünk...">
-          </div>
-          <div class="form-group">
-            <label for="golyaSzak">Szak</label>
-             <input type="text" class="form-control" id="golyaSzak" name="golyaSzak" placeholder="A szak, ahová felvételt nyertél...">
-          </div>
-          <div class="form-group">
-            <label for="golyaBeiratkozas">Beiratkozás ideje</label>
-             <input type="date" class="form-control" id="golyaBeiratkozas" name="golyaBeiratkozas">
-             <span class="help-block">Elviszünk beiratkozni meg minden!</span>
-          </div>
-          <div class="form-group">
-            <label for="golyaEsku">Eskütétel ideje</label>
-             <input type="date" class="form-control" id="golyaEsku" name="golyaEsku">
-             <span class="help-block">Csak, hogy tudjuk mikorra kell kijózanodnod</span>
-          </div>
-          <div class="form-group">
-            <label for="golyaEgyeb">Megjegyzés</label>
-            <input type="textbox" class="form-control" id="golyaEgyeb" name="golyaEgyeb" >
-            <span class="help-block">Minden egyéb információ (speciális étrend, allergia, betegség, gyógyszerek, stb.)
-            </div>
-        </div>
-        <div class="modal-footer">
-          <input type="submit" class="hidden">
-          <a type="button" onclick="validateForm()" class="btn btn-primary">Kész vagyok, kapitány!</a>
-        </form>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /Gólya regform vége -->
-
-      <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarouse2" data-slide-to="1"></li>
-        <li data-target="#myCarouse3" data-slide-to="2"></li>
-
-      </ol>
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="src/img/bcgrnd3.jpg" alt="0" class="img-responsive">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Terraformálás Öthalmián!</h1>
-              <p>Szeretnél tagja lenni az égitest élhetővé alakításában? Megismerni a legkorszerűbb terraformálási eljárásokat? Kinyerni a hatalmas mennyiségű etanolt a légkörből?</p>
-              <p><a data-toggle="modal" href="#golyaModal" class="btn btn-primary btn-large">Jelentkezz még ma!</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="src/img/bcgrnd2.jpg" alt="1" class="img-responsive">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Bázis</h1>
-              <p>Megismerheted a Szegedi Tudományegyetem egyik legjobb kollégiumát még a tanévkezdés előtt!</p>
-              <p><a class="btn btn-large btn-primary" href="#terraform">Érdekel!</a></p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="item">
-          <img src="src/img/bcgrnd3.jpg" alt="2" class="img-responsive">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Augusztus 26-29</h1>
-              <p>Maradt még kérdésed? Igyekszünk mindenre válaszolni! Keress minket <a href="https://www.facebook.com/events/495876977166326/" target="_blank"></a>Facebookon is</p>
-              <p><a class="btn btn-large btn-primary" href="#other">Itt!</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div><!-- /.carousel -->
+    <!-- /Teljesoldalas kezdőkép vége -->
 
 
+    <div id="program" class="container">
+<div class="callout2">
+      <div class="starter-template">
+        <h1>2014.04.xx. - Első nap</h1>
+        <p class="lead">Az első nap programjainak felsorolása  valami szép, színes képpel<br> Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül!</p>
+      </div></div>
+      
+      
+    </div><!-- /.container -->
+    
+    <div class="callout">
 
-   
-
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <a href="http://othalmidiaklakasok.hu"><img class="img-circle" src="src/img/othalmia_140_01.jpg"></a>
-          <h2>Öthalmia</h2>
-          <p>Bővebb információk a kollégiumról és környékéről</p>
-          <p><a class="btn btn-default" href="http://othalmidiaklakasok.hu">Öthalmia &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <a href="#terraform"><img class="img-circle" src="src/img/othalmia_140_02.jpg"></a>
-          <h2>Terraformálás</h2>
-          <p>A Gólyatáborral kapcsolatos további fontos információk</p>
-          <p><a class="btn btn-default" href="#terraform">Terraformálás &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <a href="#other"><img class="img-circle" src="src/img/othalmia_140_03.jpg"></a>
-          <h2>Hiperűrugrás</h2>
-          <p>Hogyan találhatod meg Öthalmiát az éterben</p>
-          <p><a class="btn btn-default" href="#other">Egyéb &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-           
-      <hr id="terraform" class="featurette-divider">
-      <div  class="featurette">
-        <img class="featurette-image img-rounded pull-left" src="src/img/we_want_U2.jpg">
-        <h2 class="featurette-heading">'13 augusztus 26-29 <span class="text-muted">Terraformálás</span></h2>
-        <p class="lead">Ne maradj le a nyár legnagyobb bulijáról!</p>
-        <h4><ul class="list-unstyled">
-          <li><strong>"</strong> Központi bolygó: Szegediensis</li>
-          <li>Típus: kőzetbolygó</li>
-          <li>Légnyomás: megfelelő</li>
-          <li>Légkör: megfelelő ( 78%N, 21%O, 1%etanol)</li>
-          <li>Kinyerhető nyersanyag: a légkörben levő nagymennyiségű etanol</li>
-          <li class="text-success">Terraformálásra alkalmas!</li><br>
-        <ul class="list-unstyled"><li>
-        Felderítő szenzoraink a holdat emberi szempontból értékesnek találták.
-        A légkörben levő nagymennyiségű etanol egy 4 napos küldetés során kinyerhető!</li>
-        <li class="text-danger">A hold terraformálóinak elhelyezésére szolgáló épületeket létrehozó szondákkal és egységekkel a kapcsolat csillagidő szerint 350655.9-kor megszakadt ismeretlen okokból.</li>
-        <li>Bár a kapcsolat megszakadt az Öthalmiai egységgel, a terraformálók elhelyezésére szolgáló épületek munkálatai befejeződtek.</li>
-        <li class="text-success">
-        Ezennel elrendelem a hold terraformálásának második fáisát.
-        A terraformáló egységek érkezése várhatóan csillagidő szerint <abbr title="2013.08.26. - 2013.08.29. között" class="initialism">310740.8</abbr>-kor történik. "<small>--Részlet <strong>Sgt. Andor</strong> jelentéséből</small></li></ul></h4><br>
-        <p class="lead">Téged is várunk egy feledhetetlen gólyatáborba, ahol:<br><br>
-        
-       
-          <span class="glyphicon glyphicon-ok">   szórakoztató programokban ismerkedhetsz meg leendő kollégiumi társaiddal<br>
-          <span class="glyphicon glyphicon-ok">   bepillantást nyerhetsz az Öthalmiak életébe<br>
-          <span class="glyphicon glyphicon-ok">   terraformálhatsz egy holdat<br>
-          <span class="glyphicon glyphicon-ok">   felejthetetlen élményekkel gazdagodsz<br>
-          <span class="glyphicon glyphicon-ok">   nem hagyjuk, hogy éhezz vagy kiszáradj<br>
-          <span class="glyphicon glyphicon-ok">   elviszünk beiratkozni<br>
-          <span class="glyphicon glyphicon-ok">   segítünk a kurzusfelvételben (órarend összeállítása, ETR használata, etc.)<br>
-          <span class="glyphicon glyphicon-ok"> esténként bulik, koncertek várnak!
-       <br><br>
-        A tábor költsége <strong>6500 HUF</strong>, ami magában foglalja:<br><br>
-        
-          <span class="glyphicon glyphicon-star"> a szállást<br>
-          <span class="glyphicon glyphicon-star"> étkezést<br>
-          <span class="glyphicon glyphicon-star"> státuszszimbólumnak számító, menő ÖthalmiGT-s pólót<br>
-          <span class="glyphicon glyphicon-star"> az egész napos programokat<br>
-          <span class="glyphicon glyphicon-star"> az esti bulikat, koncerteket<br>
-          <span class="glyphicon glyphicon-star"> egy vízipisztolyt<br><br>
-          <br><br>
-          Ajánlott hozni a gólyatáborba fürdő- és 'játszós' ruhát, illetve mindent, ami a beköltözéshez szükséges (konyhai eszközök, evőeszközök, piperekellékek, ruhák, etc.). Ágynemű, párna, takaró, kislámpa, lavór, ruhaszárító <strong>NEM</strong> kell, ezeket biztosítjuk.<br><br>
-          <h3>Érkezés: <span class="text-muted">2013 augusztus 26. (kedd) 8-16 óra között</span></h3>
-           <h3>Jelentkezési határidő: <span class="text-muted">2013 augusztus 22. (csütörtök)</span></h3>
-          <p class="text-center"><a data-toggle="modal" href="#golyaModal" class="btn btn-info btn-large">Jelentkezem!</a></p>
-        
-      </p>
-      </div>
-
-      <hr id="other" class="featurette-divider">
-
-      <div class="featurette">
-        <p class="pull-right img-rounded"><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=46.277697,20.097823&amp;daddr=&amp;hl=en&amp;geocode=&amp;sll=46.275539,20.099359&amp;sspn=0.005888,0.009645&amp;mra=mift&amp;mrsp=0&amp;sz=17&amp;ie=UTF8&amp;t=t&amp;ll=46.277771,20.097942&amp;spn=0.005191,0.00912&amp;z=16&amp;output=embed"></iframe></p>
-        <h2 class="featurette-heading">Hiperűrugrás <span class="text-muted">Öthalmiára</span></h2>
-        <p class="lead">Hogyan találsz ide?
-          <br><br><strong>Vasút</strong><br> Nagyállomás <span class="glyphicon glyphicon-arrow-right"></span> 1-es vagy 2-es villamossal a <strong>Damjanich utca</strong> megállóig <span class="glyphicon glyphicon-arrow-right"></span> átszállás a 79-es buszra<br><br>
-         <strong>Busz</strong><br>Mars tér (buszpályaudvar) <span class="glyphicon glyphicon-arrow-right"></span> 79-es helyi járat (kb. 15-20 perc) <span class="glyphicon glyphicon-arrow-right"></span> az Auchan utáni második megállónál (<strong>Öthalmi Diáklakások megálló</strong>) kell leszállnod és követni a jelzéseket (1-2 perc séta) <br><p class="lead text-success">Mindkét helyszínen 10 és 14 óra között kollégisták várnak titeket.</p><br><br><p class="lead">
-         <strong>A kollégium pontos címe:</strong><br>
-         Budapesti út 5.<br>
-         Szeged, 6728
-         <br><br>Csatlakozz a Facebook eseményhez, ahol további információkkal gazdagodhadsz, illetve megtudhatod kik jönnek még az <a href="https://www.facebook.com/events/495876977166326/" target="_blank">Öthalmi Gólyatáborba!</a>
-       </p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-
-      <!-- FOOTER -->
-      <footer>
-          <p class="pull-right"><address>
-            <strong>Öthalmi Diáklakások</strong><br>
-            Budapesti út 5.<br>
-            Szeged, 6728<br>
-            <strong><span class="glyphicon glyphicon-phone"></span> Kollégium:</strong> +36 62 462 786<br>
-            <strong><span class="glyphicon glyphicon-phone"></span> Csontó Réka (kollégiumi ügyintézés):</strong> +36 20 592 3555<br>
-            <strong><span class="glyphicon glyphicon-phone"></span> Gulyás Ferenc (gólyatábor főszervező):</strong> +36 20 510 1716<br>
-            <strong>@:</strong><a href="mailto:othalom@halom.u-szeged.hu">othalom@halom.u-szeged.hu</a>
-          </address>
-        </p>
-        <p class="pull-right"><a href="#">Az oldal tetejére</a></p>
-        <p class="clearfix">&copy; 2013 Gulyás Ferenc &middot; <a href="https://www.facebook.com/events/495876977166326/" target="_blank">Facebook</a></p>
-      </footer>
-
+      <div class="starter-template">
+         
+          <div class="col-md-8 col-md-offset-3 text-right">
+        <h1>2014.04.xx. - Második nap</h1>
+        <p class="lead">Az második nap programjainak felsorolása  valami szép, színes képpel<br> Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül!</p>
+      </div></div>
+      </div>      
+      
     </div><!-- /.container -->
 
+        <div class="container">
+<div class="callout2">
+      <div class="starter-template">
+        <h1>2014.04.xx. - Harmadik nap</h1>
+        <p class="lead">Az harmadik nap programjainak felsorolása  valami szép, színes képpel<br> Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül!</p>
+      </div></div>
+      
+      
+    </div><!-- /.container -->
 
+        <div class="callout">
+ <div class="col-md-8 col-md-offset-3 text-right">
+      <div class="starter-template">
+        <h1>Kísérő rendezvények</h1>
+        <p class="lead">Egy újabb menüpont, hogy látványosabb legyen a dolog<br> Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül! Ide még sokkal több tartalom kerül!</p>
+      </div>
+      
+      
+    </div><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
 
-    <!-- JavaScript plugins (requires jQuery) -->
+    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+    <script>
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+    <script>
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
-   
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="src/js/jquery.min.js"></script>
-    <script src="src/js/bootstrap.js"></script>
-    <script src="src/js/holder.js"></script>
-    <script src="src/css/bootstrap.min.css"></script>
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
   </body>
 </html>
