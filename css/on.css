@@ -150,6 +150,8 @@ i.service-icon {
   text-align: center;
 }
 
+
+
 /* Callout */
 
 .callout {
@@ -219,7 +221,9 @@ i.service-icon {
 /* Footer */
 
 footer {
-  padding: 100px 0;
+  
+  position: absolute;
+background: url(../img/bg-footer-noise.jpg);
 }
 
 .top-scroll {
@@ -240,14 +244,10 @@ i.scroll:hover {
 }
 /* Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 1920px) {
   
   .header {
   background: url(../img/OthalmiFront.jpg) no-repeat center center scroll; 
-  }
-
-  .callout {
-  background: url(../img/callout.jpg) no-repeat center center scroll; 
   }
 
   .map {
@@ -255,3 +255,4 @@ i.scroll:hover {
   }
 
 }
+
