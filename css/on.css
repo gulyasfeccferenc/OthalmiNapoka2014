@@ -109,14 +109,15 @@ body {
 
 .header {
   display: table;
-  height: 70%;
   width: 100%;
+  height: 70%;
   position: relative;
-  background: transparent url(../img/OthalmiFront.png) no-repeat center center ; 
+  background:  url(../img/OthalmiFront.png) no-repeat center center scroll; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  
 }
 
 #corner-ad {
@@ -458,6 +459,7 @@ h1 {
 }
 
 #location {
+  color: #ffffff;
   background: url('../terkep.jpg') no-repeat center center;
     width: 100%; 
     height: 300px;
@@ -486,4 +488,9 @@ h1 {
 .panel .img-responsive {
   min-height:270px;
     max-height:270px;
+}
+
+address {
+  color: #ffffff;
+  font-size: 18px;
 }
