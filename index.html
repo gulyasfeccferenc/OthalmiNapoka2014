@@ -54,7 +54,7 @@
           <li><a href="#info">Információk</a></li>
           <li><a href="#location">Helyszín</a></li>
           <li><a href="#tamogatok">Támogatók</a></li>
-          <li><a href="#jelentkezes">Jelentkezés</a></li>
+          <li><a href="#jelentkezes" data-toggle="modal" data-target="#myModal">Jelentkezés</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div><!--/.container -->
@@ -142,6 +142,25 @@
 <ul class="nav pull-right scroll-top">
   <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
 </ul>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Jelentkezés</h4>
+      </div>
+      <div class="modal-body">
+        Hamarosan...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Bezárás</button>
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Bootstrap core JavaScript ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
